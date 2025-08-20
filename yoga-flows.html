@@ -93,34 +93,34 @@
     <p>Always move slowly and listen to your body!</p>  
   
     <script>  
-    function checkPass1() {  
+ function checkPass1() {  
   const pass = document.getElementById("videoPass1").value;  
   if (pass === "password123") {  
     document.getElementById("videoSection1").style.display = "block";  
-    // Pop-up challenge after unlocking  
+    // Pop-up appears right after unlocking the video  
     setTimeout(function() {  
-      let answer = prompt("Cybersecurity Challenge!\nWhy is 'password123' a bad password?");  
-      if (answer && answer.toLowerCase().includes("easy")) {  
-        alert("Correct! It's too easy to guess.");  
+      let answer = prompt("Cybersecurity Challenge!\nWhy shouldn’t you use 'password123' as your real password?");  
+      if (answer && (answer.toLowerCase().includes("easy") || answer.toLowerCase().includes("guess"))) {  
+        alert("Correct! It's easy to guess and not secure.");  
       } else {  
-        alert("Try again next time! It's not a good password because it's easy to guess.");  
+        alert("Try again next time! Simple passwords are easy for hackers to guess.");  
       }  
     }, 500);  
   } else {  
     alert("Wrong password! Try again.");  
   }  
-}
-     function checkPass2() {  
+}  
+  
+function checkPass2() {  
   const pass = document.getElementById("videoPass2").value;  
   if (pass === "12345") {  
     document.getElementById("videoSection2").style.display = "block";  
-    // Pop-up challenge after unlocking  
     setTimeout(function() {  
-      let answer = prompt("Linux Challenge!\nWhat does the command 'pwd' do?");  
-      if (answer && answer.toLowerCase().includes("print") && answer.toLowerCase().includes("directory")) {  
-        alert("Correct! 'pwd' prints your current working directory.");  
+      let answer = prompt("Linux Challenge!\nWhat does the command 'ls' show you?");  
+      if (answer && (answer.toLowerCase().includes("files") || answer.toLowerCase().includes("list"))) {  
+        alert("Nice! 'ls' lists all the files and folders in your current directory.");  
       } else {  
-        alert("Try again next time! 'pwd' shows which folder you are in.");  
+        alert("Try again! 'ls' lists files/folders you can see.");  
       }  
     }, 500);  
   } else {  
@@ -132,7 +132,6 @@ function checkPass3() {
   const pass = document.getElementById("videoPass3").value;  
   if (pass === "qwerty") {  
     document.getElementById("videoSection3").style.display = "block";  
-    // Pop-up challenge after unlocking  
     setTimeout(function() {  
       let answer = prompt("Cybersecurity Challenge!\nName one way to make a password stronger.");  
       if (answer && (  
@@ -142,15 +141,15 @@ function checkPass3() {
         answer.toLowerCase().includes("uppercase") ||  
         answer.toLowerCase().includes("lowercase")  
       )) {  
-        alert("Nice! Using numbers, symbols, and long passwords makes them stronger.");  
+        alert("Great! Strong passwords use a mix of letters, numbers, and symbols.");  
       } else {  
-        alert("Good try! Strong passwords use numbers, symbols, and more characters.");  
+        alert("Good try! Strong passwords should use a mix of letters, numbers, and symbols.");  
       }  
     }, 500);  
   } else {  
     alert("Wrong password! Try again.");  
   }  
-}
+}  
     </script>  
   </body>  
 </html>  
