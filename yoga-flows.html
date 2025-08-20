@@ -19,6 +19,13 @@
       nav a:hover {  
         background: #b6d5d6;  
       }  
+      .tip {  
+        background: #f8e9a1;  
+        padding: 10px;  
+        border-radius: 8px;  
+        margin-bottom: 20px;  
+        margin-top: 10px;  
+      }  
     </style>  
   </head>  
   <body>  
@@ -28,62 +35,69 @@
       <a href="yoga-flows.html">Yoga Flows</a>  
     </nav>  
     <h1>Yoga Flows</h1>  
-  <input type="password" id="videoPass" placeholder="Enter password">  
-<button onclick="checkPass()">Unlock Video</button>  
-<div id="videoSection" style="display:none;">  
-  <!-- Your video iframe goes here -->  
-  <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
-</div>  
-<script>  
-function checkPass() {  
-  const pass = document.getElementById("videoPass").value;  
-  if (pass === "password123") { // Weak password for practice!  
-    document.getElementById("videoSection").style.display = "block";  
-  } else {  
-    alert("Wrong password! Try again.");  
-  }  
-}  
-</script>  
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
-    <p><strong>Downward Dog:</strong> Start on hands and knees. Lift hips up to make a triangle shape. Hold for 5 breaths.</p>  
-  <input type="password" id="videoPass" placeholder="Enter password">  
-<button onclick="checkPass()">Unlock Video</button>  
-<div id="videoSection" style="display:none;">  
-  <!-- Your video iframe goes here -->  
-  <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
-</div>  
-<script>  
-function checkPass() {  
-  const pass = document.getElementById("videoPass").value;  
-  if (pass === "admin123") { // Weak password for practice!  
-    document.getElementById("videoSection").style.display = "block";  
-  } else {  
-    alert("Wrong password! Try again.");  
-  }  
-}  
-</script>  
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/2MJGg-dUKh0" allowfullscreen></iframe>  
-    <p><strong>Child’s Pose:</strong> Kneel, sit back on your heels, stretch arms forward, and rest forehead on the ground. Breathe deeply.</p>  
-  <input type="password" id="videoPass" placeholder="Enter password">  
-<button onclick="checkPass()">Unlock Video</button>  
-<div id="videoSection" style="display:none;">  
-  <!-- Your video iframe goes here -->  
-  <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
-</div>  
-<script>  
-function checkPass() {  
-  const pass = document.getElementById("videoPass").value;  
-  if (pass === "456789123") { // Weak password for practice!  
-    document.getElementById("videoSection").style.display = "block";  
-  } else {  
-    alert("Wrong password! Try again.");  
-  }  
-}  
-</script>  
-    <iframe width="300" height="200" src="https://www.youtube.com/embed/5NxDs-ovJU8" allowfullscreen></iframe>  
-    <p><strong>Mountain Pose:</strong> Stand tall, feet together, arms at your sides. Take slow, deep breaths.</p>  
+  
+    <!-- Downward Dog: Password protected -->  
+    <input type="password" id="videoPass1" placeholder="Enter password">  
+    <button onclick="checkPass1()">Unlock Downward Dog Video</button>  
+    <div id="videoSection1" style="display:none;">  
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
+      <p><strong>Downward Dog:</strong> Start on hands and knees. Lift hips up to make a triangle shape. Hold for 5 breaths.</p>  
+      <div class="tip">  
+        <strong>Cybersecurity Tip:</strong> Never use "password123" for your real accounts—it's too easy to guess!  
+      </div>  
+    </div>  
+  
+    <!-- Child’s Pose: Password protected -->  
+    <input type="password" id="videoPass2" placeholder="Enter password">  
+    <button onclick="checkPass2()">Unlock Child's Pose Video</button>  
+    <div id="videoSection2" style="display:none;">  
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/2MJGg-dUKh0" allowfullscreen></iframe>  
+      <p><strong>Child’s Pose:</strong> Kneel, sit back on your heels, stretch arms forward, and rest forehead on the ground. Breathe deeply.</p>  
+      <div class="tip">  
+        <strong>Linux Tip:</strong> The command <code>pwd</code> shows you your current folder. Try it in a Linux terminal!  
+      </div>  
+    </div>  
+  
+    <!-- Mountain Pose: Password protected -->  
+    <input type="password" id="videoPass3" placeholder="Enter password">  
+    <button onclick="checkPass3()">Unlock Mountain Pose Video</button>  
+    <div id="videoSection3" style="display:none;">  
+      <iframe width="300" height="200" src="https://www.youtube.com/embed/5NxDs-ovJU8" allowfullscreen></iframe>  
+      <p><strong>Mountain Pose:</strong> Stand tall, feet together, arms at your sides. Take slow, deep breaths.</p>  
+      <div class="tip">  
+        <strong>Cybersecurity Tip:</strong> Use a mix of letters, numbers, and symbols for stronger passwords!  
+      </div>  
+    </div>  
   
     <p>Always move slowly and listen to your body!</p>  
+  
+    <script>  
+      function checkPass1() {  
+        const pass = document.getElementById("videoPass1").value;  
+        if (pass === "password123") {  
+          document.getElementById("videoSection1").style.display = "block";  
+        } else {  
+          alert("Wrong password! Try again.");  
+        }  
+      }  
+      function checkPass2() {  
+        const pass = document.getElementById("videoPass2").value;  
+        if (pass === "12345") {  
+          document.getElementById("password").style.display = "block";  
+        } else {  
+          alert("Wrong password! Try again.");  
+        }  
+      }  
+      function checkPass3() {  
+        const pass = document.getElementById("videoPass3").value;  
+        if (pass === "qwerty") {  
+          document.getElementById("1234567890").style.display = "block";  
+        } else {  
+          alert("Wrong password! Try again.");  
+        }  
+      }  
+    </script>  
   </body>  
 </html>  
+ 
 
