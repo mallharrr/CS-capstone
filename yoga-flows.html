@@ -3,6 +3,13 @@
   <head>  
     <title>Yoga Flows</title>  
     <style>  
+      .chakra-root { color: #e53935; }  
+      .chakra-sacral { color: #fb8c00; }  
+      .chakra-solar { color: #fdd835; }  
+      .chakra-heart { color: #43a047; }  
+      .chakra-throat { color: #1e88e5; }  
+      .chakra-third-eye { color: #6d4c41; }  
+      .chakra-crown { color: #8e24aa; }  
       nav {  
         margin-bottom: 20px;  
       }  
@@ -19,6 +26,9 @@
       nav a:hover {  
         background: #b6d5d6;  
       }  
+      .section {  
+        margin-bottom: 40px;  
+      }  
       .tip {  
         background: #f8e9a1;  
         padding: 10px;  
@@ -32,25 +42,83 @@
     <nav>  
       <a href="index.html">Home</a>  
       <a href="about-yoga.html">About Yoga</a>  
-      <a href="yoga-flows.html">Yoga Flows</a>   
+      <a href="yoga-flows.html">Yoga Flows</a>  
+      <a href="linux-basics.html">Linux Basics</a>  
+      <a href="cybersecurity.html">Cybersecurity</a>  
     </nav>  
-    <h1>Yoga Practice Poses & Flows</h1>  
+  
+    <h1 class="chakra-crown">Yoga Practice Poses & Flows</h1>  
     <p>Learn its history and how it can help your body</p>  
   
-    <!-- Downward Dog: Password protected -->  
-    <input type="password" id="videoPass1" placeholder="Enter password">  
-    <button onclick="checkPass1()">Unlock Downward Dog Video</button>  
-    <div id="videoSection1" style="display:none;">  
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
-      <p><strong>Downward Dog:</strong> Start on hands and knees. Lift hips up to make a triangle shape. Hold for 5 breaths.</p>  
-      <div class="tip">  
-        <strong>Cybersecurity Tip:</strong> Never use "password123" for your real accounts—it's too easy to guess!  
+    <!-- Downward Dog Section -->  
+    <div class="section">  
+      <h2 class="chakra-root">Downward Dog</h2>  
+      <input type="password" id="videoPass1" placeholder="Enter password">  
+      <button onclick="checkPass1()">Unlock Downward Dog Video</button>  
+      <div id="videoSection1" style="display:none;">  
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/Y0GDgQqt-bA" allowfullscreen></iframe>  
+        <p><strong>Downward Dog:</strong> Start on hands and knees. Lift hips up to make a triangle shape. Hold for 5 breaths.</p>  
+        <div class="tip">  
+          <strong>Cybersecurity Tip:</strong> Never use "password123" for your real accounts—it's too easy to guess!  
+        </div>  
       </div>  
     </div>  
   
-    <!-- Child’s Pose: Password protected -->  
-    <input type="password" id="videoPass2" placeholder="Enter password">  
-    <button onclick="checkPass2()">Unlock Child's Pose Video</button>  
-    <div id="videoSection2" style="display:none;">  
-      <iframe width="300" height="200" src="https://www.youtube.com/embed/2MJGg-dUKh0" allowfullscreen></iframe>  
-      <
+    <!-- Child's Pose Section -->  
+    <div class="section">  
+      <h2 class="chakra-sacral">Child’s Pose</h2>  
+      <input type="password" id="videoPass2" placeholder="Enter password">  
+      <button onclick="checkPass2()">Unlock Child's Pose Video</button>  
+      <div id="videoSection2" style="display:none;">  
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/2MJGg-dUKh0" allowfullscreen></iframe>  
+        <p><strong>Child’s Pose:</strong> Kneel, sit back on your heels, stretch arms forward, and rest forehead on the ground. Breathe deeply.</p>  
+        <div class="tip">  
+          <strong>Linux Tip:</strong> The command <code>pwd</code> shows your current folder. Try it in a Linux terminal!  
+        </div>  
+      </div>  
+    </div>  
+  
+    <!-- Mountain Pose Section -->  
+    <div class="section">  
+      <h2 class="chakra-solar">Mountain Pose</h2>  
+      <input type="password" id="videoPass3" placeholder="Enter password">  
+      <button onclick="checkPass3()">Unlock Mountain Pose Video</button>  
+      <div id="videoSection3" style="display:none;">  
+        <iframe width="300" height="200" src="https://www.youtube.com/embed/5NxDs-ovJU8" allowfullscreen></iframe>  
+        <p><strong>Mountain Pose:</strong> Stand tall, feet together, arms at your sides. Take slow, deep breaths.</p>  
+        <div class="tip">  
+          <strong>Cybersecurity Tip:</strong> Use a mix of letters, numbers, and symbols for stronger passwords!  
+        </div>  
+      </div>  
+    </div>  
+  
+    <p>Always move slowly and listen to your body!</p>  
+  
+    <script>  
+      function checkPass1() {  
+        const pass = document.getElementById("videoPass1").value;  
+        if (pass === "password123") {  
+          document.getElementById("videoSection1").style.display = "block";  
+        } else {  
+          alert("Wrong password! Try again.");  
+        }  
+      }  
+      function checkPass2() {  
+        const pass = document.getElementById("videoPass2").value;  
+        if (pass === "12345") {  
+          document.getElementById("videoSection2").style.display = "block";  
+        } else {  
+          alert("Wrong password! Try again.");  
+        }  
+      }  
+      function checkPass3() {  
+        const pass = document.getElementById("videoPass3").value;  
+        if (pass === "qwerty") {  
+          document.getElementById("videoSection3").style.display = "block";  
+        } else {  
+          alert("Wrong password! Try again.");  
+        }  
+      }  
+    </script>  
+  </body>  
+</html>  
