@@ -92,30 +92,64 @@
     <p>Always move slowly and listen to your body!</p>  
   
     <script>  
-      function checkPass1() {  
-        const pass = document.getElementById("videoPass1").value;  
-        if (pass === "password123") {  
-          document.getElementById("videoSection1").style.display = "block";  
-        } else {  
-          alert("Wrong password! Try again.");  
-        }  
+    function checkPass1() {  
+  const pass = document.getElementById("videoPass1").value;  
+  if (pass === "password123") {  
+    document.getElementById("videoSection1").style.display = "block";  
+    // Pop-up challenge after unlocking  
+    setTimeout(function() {  
+      let answer = prompt("Cybersecurity Challenge!\nWhy is 'password123' a bad password?");  
+      if (answer && answer.toLowerCase().includes("easy")) {  
+        alert("Correct! It's too easy to guess.");  
+      } else {  
+        alert("Try again next time! It's not a good password because it's easy to guess.");  
       }  
-      function checkPass2() {  
-        const pass = document.getElementById("videoPass2").value;  
-        if (pass === "12345") {  
-          document.getElementById("videoSection2").style.display = "block";  
-        } else {  
-          alert("Wrong password! Try again.");  
-        }  
+    }, 500);  
+  } else {  
+    alert("Wrong password! Try again.");  
+  }  
+}
+     function checkPass2() {  
+  const pass = document.getElementById("videoPass2").value;  
+  if (pass === "12345") {  
+    document.getElementById("videoSection2").style.display = "block";  
+    // Pop-up challenge after unlocking  
+    setTimeout(function() {  
+      let answer = prompt("Linux Challenge!\nWhat does the command 'pwd' do?");  
+      if (answer && answer.toLowerCase().includes("print") && answer.toLowerCase().includes("directory")) {  
+        alert("Correct! 'pwd' prints your current working directory.");  
+      } else {  
+        alert("Try again next time! 'pwd' shows which folder you are in.");  
       }  
-      function checkPass3() {  
-        const pass = document.getElementById("videoPass3").value;  
-        if (pass === "qwerty") {  
-          document.getElementById("videoSection3").style.display = "block";  
-        } else {  
-          alert("Wrong password! Try again.");  
-        }  
+    }, 500);  
+  } else {  
+    alert("Wrong password! Try again.");  
+  }  
+}  
+  
+function checkPass3() {  
+  const pass = document.getElementById("videoPass3").value;  
+  if (pass === "qwerty") {  
+    document.getElementById("videoSection3").style.display = "block";  
+    // Pop-up challenge after unlocking  
+    setTimeout(function() {  
+      let answer = prompt("Cybersecurity Challenge!\nName one way to make a password stronger.");  
+      if (answer && (  
+        answer.toLowerCase().includes("long") ||  
+        answer.toLowerCase().includes("number") ||  
+        answer.toLowerCase().includes("symbol") ||  
+        answer.toLowerCase().includes("uppercase") ||  
+        answer.toLowerCase().includes("lowercase")  
+      )) {  
+        alert("Nice! Using numbers, symbols, and long passwords makes them stronger.");  
+      } else {  
+        alert("Good try! Strong passwords use numbers, symbols, and more characters.");  
       }  
+    }, 500);  
+  } else {  
+    alert("Wrong password! Try again.");  
+  }  
+}
     </script>  
   </body>  
 </html>  
